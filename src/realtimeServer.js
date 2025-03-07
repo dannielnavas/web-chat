@@ -7,6 +7,7 @@ module.exports = (httpServer) => {
 
     socket.on("message", (message) => {
       io.emit("message", {
+        date: new Date(),
         user,
         message,
       });
